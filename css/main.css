@@ -1,0 +1,291 @@
+
+html{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    background-color: rgba(26,28,27,255);
+    box-sizing: border-box;
+    padding:0;
+    color: white;
+    
+}
+
+
+/* -------------Nav--------------------- */
+
+.nav-list{
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    list-style: none;
+    font-size: 25px;
+    padding: 5px;
+    margin: 20px;
+}
+
+.nav img{
+    height: 80px;
+}
+.nav-list a,
+.nav-list a:link,
+.nav-list a:visited{
+    text-decoration: none;
+    color: rgba(240, 248, 255, 0.712);
+    transition: 1.5s ;
+
+}
+.nav-list a:hover,
+.nav-list a:focus,
+.nav-list a.current{
+    color: rgb(255, 255, 255);
+    background-color:#00000042;
+    padding:0.40em 6.2em;
+    transition: all 1.5s ease-in-out;
+    
+    
+}
+
+
+/* ------------Landing Page------------ */
+.welcome{
+    background-image: url("../images/frontpage.jpg");
+    background-size: cover;
+    background-position:center ;
+    height: 100%;
+    color: rgba(251, 251, 251, 0.904);
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    border-top: 1px solid rgba(196,207,158,255);
+    border-bottom: 1px solid rgba(196,207,158,255);
+}
+.box-welcome{
+    display: flex;
+    align-items: center;   
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.267);
+    width: 70%;
+    height: 100%
+}
+.discover{
+    display: inline-block;
+    padding:0.40em 1.2em;
+    border:0.1em solid #ffffff6e;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-weight:300;
+    color:#ffffff9b;
+    text-align:center;
+    transition: all 0.2s;
+}
+.discover:hover{
+    color: #000000;
+    background-color:#FFFFFF;
+
+}
+/* ------------Home-------------- */
+.home-content{
+    background-image: linear-gradient(rgba(26, 27, 31, 0.7),rgba(4,9,30,0.7)),url("../images/frontpage.jpg");
+    background-size: cover;
+    background-position:center ;
+    background-size: cover;
+    border-top: 1px solid rgba(196,207,158,255);
+    border-bottom: 1px solid rgba(196,207,158,255);
+    text-align: center;
+    
+}
+.items{
+    margin: auto;
+    width: 80%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    
+    
+}
+.items img{
+    margin-top: 50px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: rgba(53, 53, 53, 0.678);
+    
+}
+.items h3{
+    border-bottom: 1px solid orange;
+}
+.items p{
+    color: rgb(212, 212, 212);
+}
+.card{
+    background-color: rgba(128, 128, 128, 0.212);
+    border: 1px solid rgba(17, 17, 17, 0.774) ;
+    margin-top: 40px;
+    padding: 30px ;
+    border-radius: 10px;
+    
+}
+span.price{
+    float: right;
+    margin-bottom: 10px;
+    color: rgb(115, 77, 219)
+}
+
+
+
+/* ----------------Home MEDIA QUERY 800px and ABOVE------------- */
+@media screen and (min-width: 800px) {
+    .items{
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr; 
+        max-width: 70%;
+    }
+    .items img{
+        height: auto;
+    }
+    .card{
+        margin-left: 30px;
+    }
+    .nav-list{
+        display: flex;
+        align-items: center;
+        height: 120px;
+        flex-direction: row;
+
+        
+    }
+    .nav-list a{
+        padding-left: 50px;
+    }
+   
+}
+
+/* --------------Order---------- */
+.order-content{
+    background-image: linear-gradient(rgba(26, 27, 31, 0.7),rgba(4,9,30,0.7)),url("../images/frontpage.jpg");
+    background-size: cover;
+    background-position:center ;
+    background-size: cover;
+    border-top: 1px solid rgba(196,207,158,255);
+    border-bottom: 1px solid rgba(196,207,158,255);
+    text-align: center;
+    height: 100%;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.box{
+    position: relative;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+@keyframes special_effect {
+    0% {
+      transform: translateY(0) translateZ(0) rotateX(0deg);
+      transform-origin: top center;
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(150px) translateZ(130px) rotateX(90deg);
+      transform-origin: top center;
+      opacity: 0.3;}
+    
+}
+.order-content .card{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    transition: 1.5s;
+
+}
+.order-content .card:hover{
+    animation-name:special_effect;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+}
+.order-content img{
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 20px;
+}
+.order-content h3{
+    color: rgb(115, 77, 219);
+}
+.contactform{
+
+    padding: 80px;
+    text-align: left;
+}
+.contactform .inputBox{
+    position: relative;
+    width: 100%;
+}
+.contactform .inputBox input, textarea{
+    min-width: 100%;
+    width: 100%;
+    padding: 25px 0;
+    margin: 20px 0;
+    background-color: rgba(77, 77, 77, 0.589);
+    resize: none;
+}
+input[type=submit]{
+    margin-top: 20px;
+    font-size: 1em;
+    color: rgba(7, 199, 23, 0.698) ;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+.contactform .inputBox span{
+    padding: 5px 0;
+    font-size: 15px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 2s;
+    color: rgb(129, 129, 129);
+}
+
+/* ---------Max 800px */
+@media (max-width: 800px) {
+    .box{
+        flex-direction: column;
+    }
+
+
+    .order-content .card{
+        margin-top: 200px;
+        width: 70%;
+        max-height: 50%;
+        
+    }
+    .order-content{
+        padding-bottom: 50px;
+    }
+    
+
+    
+}
+
+/* -----------Footer---------- */
+.site-footer{
+    height: 50px;
+    line-height: 2;
+    font-size: 0.8em;
+    width:1200px;
+    margin-left: 50px;
+    margin-top: 20px;
+    color:rgba(255, 255, 255, 0.712);
+}
